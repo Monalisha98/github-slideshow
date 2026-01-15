@@ -17,14 +17,14 @@ import java.util.Map;
  */
 public class XmlToJsonConverter {
     
+    private static final String DELIMITER_PATTERN = "[-_ ]";
+    
     private final XmlMapper xmlMapper;
     private final ObjectMapper jsonMapper;
     
     public XmlToJsonConverter() {
         this.xmlMapper = new XmlMapper();
         this.jsonMapper = new ObjectMapper();
-        // Configure JSON mapper to use camel case
-        this.jsonMapper.setPropertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE);
     }
     
     /**
@@ -112,7 +112,7 @@ public class XmlToJsonConverter {
         }
         
         // Split by common delimiters
-        String[] parts = input.split("[-_ ]");
+        String[] parts = input.split(DELIMITER_PATTERN);
         
         if (parts.length == 1) {
             // No delimiters found, check if it's PascalCase
@@ -153,7 +153,6 @@ public class XmlToJsonConverter {
      * @throws IOException if file writing fails
      */
     public void saveJsonToFile(String jsonContent, File outputFile) throws IOException {
-        jsonMapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, 
-            jsonMapper.readTree(jsonContent));
+        java.nio.file.Files.writeString(outputFile.toPath(), jsonContent);
     }
 }
