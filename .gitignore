@@ -2,3 +2,18 @@ _site/
 .sass-cache/
 .jekyll-metadata
 .bundle
+
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+
+# Build output
+output.json

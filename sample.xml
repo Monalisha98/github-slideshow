@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company_data>
+    <company_name>Tech Solutions Inc</company_name>
+    <company_id>CS-2024-001</company_id>
+    <founded_year>2020</founded_year>
+    <employee_count>150</employee_count>
+    <office_locations>
+        <location>
+            <office_name>Headquarters</office_name>
+            <street_address>456 Innovation Drive</street_address>
+            <city_name>San Francisco</city_name>
+            <state_code>CA</state_code>
+            <zip_code>94105</zip_code>
+            <country_name>USA</country_name>
+        </location>
+        <location>
+            <office_name>Research Center</office_name>
+            <street_address>789 Tech Parkway</street_address>
+            <city_name>Austin</city_name>
+            <state_code>TX</state_code>
+            <zip_code>78701</zip_code>
+            <country_name>USA</country_name>
+        </location>
+    </office_locations>
+    <departments>
+        <department>
+            <department_name>Engineering</department_name>
+            <department_head>Alice Johnson</department_head>
+            <employee_count>80</employee_count>
+        </department>
+        <department>
+            <department_name>Sales</department_name>
+            <department_head>Bob Williams</department_head>
+            <employee_count>40</employee_count>
+        </department>
+        <department>
+            <department_name>Human Resources</department_name>
+            <department_head>Carol Davis</department_head>
+            <employee_count>30</employee_count>
+        </department>
+    </departments>
+</company_data>
